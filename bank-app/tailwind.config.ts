@@ -88,7 +88,9 @@ const config = {
         "ibm-plex-serif": "var(--font-ibm-plex-serif)",
       },
       fontSize: {
-        16: '16px'
+        12: '12px',
+        14: '14px',
+        16: '16px',
       },
       keyframes: {
         "accordion-down": {
