@@ -75,6 +75,14 @@ export function formatAmount(amount: number): string {
   return formatter.format(amount);
 }
 
+export function formatAmountToNaira(amt: number): string {
+  const formattedNumber = amt.toLocaleString("en-NG", {
+    style: 'currency',
+    currency: 'NGN'
+  })
+  return formattedNumber;
+}
+
 export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
 
 export const removeSpecialCharacters = (value: string) => {
