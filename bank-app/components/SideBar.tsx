@@ -11,7 +11,6 @@ import React from 'react';
 
 const SideBar: React.FC<SiderbarProps> = ({ user }) => {
   const pathname = usePathname()
-  console.log(pathname)
   return (
     <section className='sidebar'>
       <nav className="flex flex-col gap-4">
