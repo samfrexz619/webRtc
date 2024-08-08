@@ -13,7 +13,7 @@ import { Form } from "@/components/ui/form"
 import CustomInput from './CustomInput';
 import { authFormSchema } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
-
+import { signUp, signIn } from '@/lib/actions/user.actions';
 
 interface AuthFormProps {
   type: string;
@@ -25,6 +25,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter()
+
 
   const formSchema = authFormSchema(type)
 
@@ -41,18 +42,16 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
     try {
       // signup with Appwrite & create a plaid token
       if (type === 'sign-up') {
-        // const newUser = await signUp(data)
-        // setUser(newUser)
+        const newUser = await signUp(data)
+        setUser(newUser)
       }
       if (type === 'sign-in') {
-        // const res = await signIn({
-        //   email : data.email,
-        //   password: data.password
-        // }) 
+        const res = await signIn({
+          email: data.email,
+          password: data.password
+        })
+        if (res) router.push('/')
       }
-      // if(res) {
-      //   router.push('/')
-      // }
     } catch (error) {
 
     } finally {
