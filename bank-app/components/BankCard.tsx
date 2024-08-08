@@ -28,7 +28,7 @@ const BankCard: React.FC<CreditCardProps> = (props) => {
               </h2>
             </div>
             <p className='text-14 font-semibold tracking-[1.1px] text-white'>
-              &#9679;	&#9679;	&#9679;	&#9679; 	&#9679;	&#9679;	&#9679;	&#9679; 	&#9679;	&#9679;	&#9679;	&#9679; <span className='text-16'>{'1234'}</span>
+              &#9679;&#9679;&#9679;&#9679; &nbsp; &#9679;&#9679;&#9679;&#9679; &nbsp; 	&#9679;&#9679;&#9679;&#9679; <span className='text-16'>{'1234'}</span>
             </p>
           </article>
         </div>

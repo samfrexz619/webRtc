@@ -30,7 +30,7 @@ const SideBar: React.FC<SiderbarProps> = ({ user }) => {
             <Link
               href={link.route}
               key={link.label}
-              className={cn('sidebar-link', isActive && 'bg-bank-gradient')}
+              className={cn('sidebar-link text-14', isActive && 'bg-bank-gradient')}
             >
               <div className="relative size-6">
                 <Image

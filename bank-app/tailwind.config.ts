@@ -87,11 +87,11 @@ const config = {
         inter: "var(--font-inter)",
         "ibm-plex-serif": "var(--font-ibm-plex-serif)",
       },
-      fontSize: {
-        12: '12px',
-        14: '14px',
-        16: '16px',
-      },
+      // fontSize: {
+      //   12: '12px',
+      //   14: '14px',
+      //   16: '16px',
+      // },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
