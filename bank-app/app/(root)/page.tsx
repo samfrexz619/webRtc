@@ -1,14 +1,12 @@
 import HeaderBox from '@/components/HeaderBox';
 import RightSidebar from '@/components/RightSidebar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
+import { getLoggedInUser } from '@/lib/actions/user.actions';
 import React from 'react';
 
-const Home = () => {
-  const loggedIn = {
-    firstName: 'Taylor',
-    lastName: 'Whyte',
-    email: 'taylorwhyte@test.com'
-  }
+const Home = async () => {
+
+  const loggedIn = await getLoggedInUser()
 
   return (
     <section className='home'>
@@ -17,7 +15,7 @@ const Home = () => {
           <HeaderBox
             subtext='Access and manage your account and transaction efficiently.' type='greeting'
             title='Welcome'
-            user={loggedIn.firstName || 'Guest'}
+            user={loggedIn.name || 'Guest'}
           />
           <TotalBalanceBox accounts={[]} totalBanks={1} totalCurrentBalance={1250} />
         </header>
